@@ -23,7 +23,11 @@ export default class ShigorSparrows extends View {
         new DomContainerNode(380, 445, el(".ui",
             {
                 style: {
+                    width: 230,
+                    height: 100,
                     display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                     gap: 16,
                 },
             },
@@ -101,12 +105,18 @@ export default class ShigorSparrows extends View {
         this.ment = metadata.ment;
 
         if (isPixelMode !== true) {
+            new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/test-balloon.png`).appendTo(this.imageContainer);
             new DomContainerNode(0, -310, el("p.ment",
                 metadata.ment,
                 {
                     style: {
+                        width: 780,
+                        height: 200,
                         color: "#000000",
                         fontSize: 60,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                     },
                 },
             )).appendTo(this.imageContainer);
