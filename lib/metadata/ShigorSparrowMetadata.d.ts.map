@@ -1,0 +1,1 @@
+{"version":3,"file":"ShigorSparrowMetadata.d.ts","sourceRoot":"","sources":["../../src/metadata/ShigorSparrowMetadata.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,WAAW,qBAAqB;IAC1C,EAAE,EAAE,MAAM,CAAC;IACX,KAAK,EAAE;QAAE,CAAC,QAAQ,EAAE,MAAM,GAAG,MAAM,CAAA;KAAE,CAAC;IACtC,KAAK,EAAE,MAAM,CAAC;IACd,IAAI,EAAE,MAAM,CAAC;CAChB"}

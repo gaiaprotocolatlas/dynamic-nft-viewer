@@ -5,10 +5,8 @@
         "webpack-prod": "webpack --mode production --config webpack.config.prod.cjs"
     },
     "dependencies": {
-        "dayjs": "^1.11.7",
-        "ethers": "5.7.2",
-        "gaia-commons-browser": "0.0.1",
-        "lightweight-charts": "^4.0.1"
+        "gaia-engine": "^0.0.2",
+        "pixi-spine": "^4.0.4"
     },
     "devDependencies": {
         "assert": "^2.0.0",

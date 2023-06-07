@@ -1,0 +1,1 @@
+{"version":3,"file":"ShigorSparrows.d.ts","sourceRoot":"","sources":["../../src/view/ShigorSparrows.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,IAAI,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAEnD,MAAM,CAAC,OAAO,OAAO,cAAe,SAAQ,IAAI;IAE5C,OAAO,CAAC,SAAS,CAAU;gBAEf,MAAM,EAAE,UAAU;IAOvB,KAAK,IAAI,IAAI;CAIvB"}
