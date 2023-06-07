@@ -12,6 +12,7 @@ export default class ShigorSparrows extends View {
 
     private currentId: number | undefined;
     private isPixelMode: boolean = false;
+    private ment = "";
 
     constructor(params: ViewParams) {
         super();
@@ -30,11 +31,13 @@ export default class ShigorSparrows extends View {
                 title: el("i.fa-sharp.fa-solid.fa-image", {
                     style: { fontSize: 60 },
                 }),
+                onClick: () => this.load(this.currentId!, !this.isPixelMode),
             }),
             new Button({
                 title: el("i.fa-sharp.fa-solid.fa-volume", {
                     style: { fontSize: 60 },
                 }),
+                onClick: () => this.speakMent(),
             }),
         )).appendTo(this.screen.root);
 
@@ -95,7 +98,8 @@ export default class ShigorSparrows extends View {
             }
         }
 
-        // for test
+        this.ment = metadata.ment;
+
         if (isPixelMode !== true) {
             new DomContainerNode(0, -310, el("p.ment",
                 metadata.ment,
@@ -107,6 +111,12 @@ export default class ShigorSparrows extends View {
                 },
             )).appendTo(this.imageContainer);
         }
+    }
+
+    private speakMent(): void {
+        const utterance = new SpeechSynthesisUtterance(this.ment);
+        utterance.lang = "ko-KR";
+        speechSynthesis.speak(utterance);
     }
 
     public close(): void {
