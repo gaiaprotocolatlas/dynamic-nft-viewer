@@ -1,5 +1,6 @@
+import { Button, el } from "gaia-commons-browser";
 import { View, ViewParams } from "gaia-commons-ts";
-import { Fullscreen, ImageNode } from "gaia-engine";
+import { DomContainerNode, Fullscreen, GameNode, ImageNode } from "gaia-engine";
 import Config from "../Config.js";
 import ShigorSparrowMetadata from "../metadata/ShigorSparrowMetadata.js";
 import ShigorSparrowsParts from "../metadata/shigor-sparrows-parts.json" assert { type: "json" };
@@ -7,23 +8,51 @@ import ShigorSparrowsParts from "../metadata/shigor-sparrows-parts.json" assert 
 export default class ShigorSparrows extends View {
 
     private screen: Fullscreen;
+    private imageContainer: GameNode;
+
+    private currentId: number | undefined;
+    private isPixelMode: boolean = false;
 
     constructor(params: ViewParams) {
         super();
+
         this.screen = new Fullscreen(1000, 1000);
+        this.imageContainer = new GameNode(0, 0).appendTo(this.screen.root);
+
+        new DomContainerNode(380, 445, el(".ui",
+            {
+                style: {
+                    display: "flex",
+                    gap: 16,
+                },
+            },
+            new Button({
+                title: el("i.fa-sharp.fa-solid.fa-image", {
+                    style: { fontSize: 60 },
+                }),
+            }),
+            new Button({
+                title: el("i.fa-sharp.fa-solid.fa-volume", {
+                    style: { fontSize: 60 },
+                }),
+            }),
+        )).appendTo(this.screen.root);
 
         if (params.id !== undefined) {
-            this.load(parseInt(params.id));
+            this.load(parseInt(params.id), this.isPixelMode);
         }
     }
 
     public changeParams(params: ViewParams, uri: string): void {
         if (params.id !== undefined) {
-            this.load(parseInt(params.id));
+            this.load(parseInt(params.id), this.isPixelMode);
         }
     }
 
-    private async load(id: number) {
+    private async load(id: number, isPixelMode: boolean) {
+
+        this.currentId = id;
+        this.isPixelMode = isPixelMode;
 
         const result = await fetch(`https://${Config.appServerHost}/metadata/shigor-sparrows/${id}`);
         const metadata: ShigorSparrowMetadata = await result.json();
@@ -54,8 +83,29 @@ export default class ShigorSparrows extends View {
         }
         images.sort((a, b) => a.order - b.order);
 
+        this.imageContainer.empty();
+
         for (const image of images) {
-            new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/${image.path}`).appendTo(this.screen.root);
+            if (isPixelMode === true) {
+                if (image.path.indexOf("8.TEXT BALLOON") === -1) {
+                    new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/${image.path.replace(/normal\//g, "pixel/")}`).appendTo(this.imageContainer);
+                }
+            } else {
+                new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/${image.path}`).appendTo(this.imageContainer);
+            }
+        }
+
+        // for test
+        if (isPixelMode !== true) {
+            new DomContainerNode(0, -310, el("p.ment",
+                metadata.ment,
+                {
+                    style: {
+                        color: "#000000",
+                        fontSize: 60,
+                    },
+                },
+            )).appendTo(this.imageContainer);
         }
     }
 
