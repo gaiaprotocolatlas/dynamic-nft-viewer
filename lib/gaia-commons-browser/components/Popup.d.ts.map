@@ -1,0 +1,1 @@
+{"version":3,"file":"Popup.d.ts","sourceRoot":"","sources":["../../../src/gaia-commons-browser/components/Popup.ts"],"names":[],"mappings":"AACA,OAAO,OAAO,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,CAAC,QAAQ,OAAO,KAAM,SAAQ,OAAO;IAE/C,SAAgB,OAAO,EAAE,OAAO,GAAG,SAAS,CAAC;gBAEjC,OAAO,EAAE;QAAE,kBAAkB,EAAE,OAAO,CAAA;KAAE;CAYvD"}

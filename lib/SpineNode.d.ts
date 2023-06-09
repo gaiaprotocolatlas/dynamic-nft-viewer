@@ -1,4 +1,4 @@
-import { GameNode } from "gaia-engine";
+import GameNode from "./gaia-engine/gamenode/GameNode.js";
 export default class SpineNode extends GameNode {
     private options;
     private pixiSpine;

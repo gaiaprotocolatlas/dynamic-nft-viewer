@@ -1,0 +1,1 @@
+{"version":3,"file":"Card.d.ts","sourceRoot":"","sources":["../../../src/gaia-commons-browser/components/Card.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,mBAAmB,CAAC;AACxC,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,IAAK,SAAQ,aAAa;gBAE/B,OAAO,EAAE;QACjB,GAAG,CAAC,EAAE,MAAM,CAAC;KAChB,EAAE,GAAG,KAAK,EAAE,CAAC,OAAO,GAAG,MAAM,GAAG,SAAS,CAAC,EAAE;CAIhD"}

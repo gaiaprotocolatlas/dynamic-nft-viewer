@@ -5,8 +5,12 @@
         "webpack-prod": "webpack --mode production --config webpack.config.prod.cjs"
     },
     "dependencies": {
-        "gaia-engine": "^0.0.2",
-        "pixi-spine": "^4.0.4"
+        "@types/js-yaml": "^4.0.5",
+        "bowser": "^2.11.0",
+        "gaia-commons-ts": "^0.0.16",
+        "js-yaml": "^4.1.0",
+        "pixi-spine": "^4.0.4",
+        "pixi.js": "7.1.4"
     },
     "devDependencies": {
         "assert": "^2.0.0",

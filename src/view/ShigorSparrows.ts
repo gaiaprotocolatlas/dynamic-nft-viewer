@@ -1,7 +1,11 @@
-import { Button, el } from "gaia-commons-browser";
 import { View, ViewParams } from "gaia-commons-ts";
-import { DomContainerNode, Fullscreen, GameNode, ImageNode } from "gaia-engine";
 import Config from "../Config.js";
+import Button from "../gaia-commons-browser/components/button/Button.js";
+import el from "../gaia-commons-browser/dom/el.js";
+import DomContainerNode from "../gaia-engine/DomContainerNode.js";
+import GameNode from "../gaia-engine/gamenode/GameNode.js";
+import ImageNode from "../gaia-engine/image/ImageNode.js";
+import Fullscreen from "../gaia-engine/screen/Fullscreen.js";
 import ShigorSparrowMetadata from "../metadata/ShigorSparrowMetadata.js";
 import ShigorSparrowsParts from "../metadata/shigor-sparrows-parts.json" assert { type: "json" };
 
@@ -32,13 +36,13 @@ export default class ShigorSparrows extends View {
                 },
             },
             new Button({
-                title: el("i.fa-sharp.fa-solid.fa-image", {
+                title: el("i.fa-solid.fa-image", {
                     style: { fontSize: 60 },
                 }),
                 onClick: () => this.load(this.currentId!, !this.isPixelMode),
             }),
             new Button({
-                title: el("i.fa-sharp.fa-solid.fa-volume", {
+                title: el("i.fa-solid.fa-volume-high", {
                     style: { fontSize: 60 },
                 }),
                 onClick: () => this.speakMent(),

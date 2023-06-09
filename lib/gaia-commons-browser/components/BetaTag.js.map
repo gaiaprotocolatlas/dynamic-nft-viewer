@@ -1,0 +1,1 @@
+{"version":3,"file":"BetaTag.js","sourceRoot":"","sources":["../../../src/gaia-commons-browser/components/BetaTag.ts"],"names":[],"mappings":"AAAA,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,aAAa;IAE9C;QACI,KAAK,CAAC,WAAW,CAAC,CAAC;QACnB,IAAI,CAAC,IAAI,GAAG,MAAM,CAAC;IACvB,CAAC;CACJ"}

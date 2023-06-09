@@ -1,0 +1,1 @@
+{"version":3,"file":"BodyNode.js","sourceRoot":"","sources":["../../../src/gaia-commons-browser/dom/BodyNode.ts"],"names":[],"mappings":"AAAA,OAAO,OAAO,MAAM,cAAc,CAAC;AAEnC,MAAM,QAAS,SAAQ,OAAwB;IAE3C;QACI,KAAK,CAAC,QAAQ,CAAC,IAAW,CAAC,CAAC;IAChC,CAAC;CACJ;AAED,eAAe,IAAI,QAAQ,EAAE,CAAC"}

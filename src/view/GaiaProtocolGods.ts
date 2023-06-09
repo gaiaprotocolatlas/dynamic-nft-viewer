@@ -1,7 +1,7 @@
 import { View, ViewParams } from "gaia-commons-ts";
-import { Fullscreen } from "gaia-engine";
 import Config from "../Config.js";
 import SpineNode from "../SpineNode.js";
+import Fullscreen from "../gaia-engine/screen/Fullscreen.js";
 import GaiaProtocolGodsMetadata from "../metadata/GaiaProtocolGodsMetadata.js";
 import GodType from "../metadata/GodType.js";
 

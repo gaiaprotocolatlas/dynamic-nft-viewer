@@ -1,0 +1,1 @@
+{"version":3,"file":"PageFooter.d.ts","sourceRoot":"","sources":["../../../src/gaia-commons-browser/components/PageFooter.ts"],"names":[],"mappings":"AACA,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,aAAa;gBAErC,OAAO,EAAE;QACjB,aAAa,EAAE,MAAM,CAAC;QACtB,WAAW,EAAE,MAAM,CAAC;KACvB;CAQJ"}

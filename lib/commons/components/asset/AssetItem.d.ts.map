@@ -1,0 +1,1 @@
+{"version":3,"file":"AssetItem.d.ts","sourceRoot":"","sources":["../../../../src/commons/components/asset/AssetItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAmC,MAAM,iBAAiB,CAAC;AAIzE,OAAO,aAAa,MAAM,qBAAqB,CAAC;AAqBhD,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,aAAa;IAI7B,KAAK,EAAE,KAAK;IAF/B,OAAO,CAAC,iBAAiB,CAAU;gBAEhB,KAAK,EAAE,KAAK;IAmBxB,KAAK;IAKL,OAAO;CAIjB"}

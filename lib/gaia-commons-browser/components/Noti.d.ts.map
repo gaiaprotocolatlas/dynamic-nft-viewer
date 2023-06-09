@@ -1,0 +1,1 @@
+{"version":3,"file":"Noti.d.ts","sourceRoot":"","sources":["../../../src/gaia-commons-browser/components/Noti.ts"],"names":[],"mappings":"AACA,OAAO,OAAO,MAAM,mBAAmB,CAAC;AACxC,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,IAAK,SAAQ,aAAa;gBAE/B,OAAO,EAAE;QACjB,GAAG,CAAC,EAAE,MAAM,CAAC;KAChB,EAAE,GAAG,KAAK,EAAE,CAAC,OAAO,GAAG,MAAM,GAAG,SAAS,CAAC,EAAE;CAyBhD"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Article.js","sourceRoot":"","sources":["../../../src/commons/components/Article.ts"],"names":[],"mappings":"AACA,OAAO,aAAa,MAAM,oBAAoB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,aAAa;IAE9C,YAAY,OAEX,EAAE,GAAG,KAAuC;QACzC,KAAK,CAAC,SAAS,GAAG,CAAC,OAAO,CAAC,GAAG,IAAI,EAAE,CAAC,EAAE,GAAG,KAAK,CAAC,CAAC;IACrD,CAAC;CACJ"}
