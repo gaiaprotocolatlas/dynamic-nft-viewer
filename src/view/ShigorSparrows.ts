@@ -130,6 +130,7 @@ export default class ShigorSparrows extends View {
     private speakMent(): void {
         const utterance = new SpeechSynthesisUtterance(this.ment);
         utterance.lang = "ko-KR";
+        utterance.pitch = 1.2;
         speechSynthesis.speak(utterance);
     }
 
