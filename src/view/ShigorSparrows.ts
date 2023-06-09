@@ -109,7 +109,7 @@ export default class ShigorSparrows extends View {
         this.ment = metadata.ment;
 
         if (isPixelMode !== true) {
-            new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/test-balloon.png`).appendTo(this.imageContainer);
+            //new ImageNode(0, 0, `/nft-image-parts/shigor-sparrows/test-balloon.png`).appendTo(this.imageContainer);
             new DomContainerNode(0, -310, el("p.ment",
                 metadata.ment,
                 {
