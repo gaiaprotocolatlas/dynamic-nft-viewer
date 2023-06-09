@@ -1,4 +1,4 @@
-import { AtlasAttachmentLoader, SkeletonJson, Skin as SpineSkin } from "@pixi-spine/runtime-4.0";
+import { AtlasAttachmentLoader, SkeletonJson, Skin as SpineSkin } from "@pixi-spine/runtime-4.1";
 import { GameNode, TextureLoader } from "gaia-engine";
 import { Spine as PIXISpine, TextureAtlas } from "pixi-spine";
 import * as PIXI from "pixi.js";
@@ -45,7 +45,7 @@ export default class SpineNode extends GameNode {
         const spineAtlasLoader = new AtlasAttachmentLoader(spineAtlas);
         const spineJsonParser = new SkeletonJson(spineAtlasLoader);
 
-        this.pixiSpine = new PIXISpine(spineJsonParser.readSkeletonData(rawSkeletonData));
+        this.pixiSpine = new PIXISpine(spineJsonParser.readSkeletonData(rawSkeletonData) as any);
         if (this.animation !== undefined) {
             this.pixiSpine.state.setAnimation(0, this.animation, this.options.loop !== false);
         }
