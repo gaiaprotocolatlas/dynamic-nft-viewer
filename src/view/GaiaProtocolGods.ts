@@ -1,7 +1,7 @@
 import { View, ViewParams } from "gaia-commons-ts";
 import Config from "../Config.js";
 import SpineNode from "../SpineNode.js";
-import Fullscreen from "../gaia-engine/screen/Fullscreen.js";
+import Fullscreen from "../engine/screen/Fullscreen.js";
 import GaiaProtocolGodsMetadata from "../metadata/GaiaProtocolGodsMetadata.js";
 import GodType from "../metadata/GodType.js";
 
@@ -28,7 +28,7 @@ export default class GaiaProtocolGods extends View {
     private async load(id: number) {
         this.spineNode?.delete();
 
-        const result = await fetch(`https://${Config.appServerHost}/metadata/gaia-protocol-gods/${id}`);
+        const result = await fetch(`${Config.appServerHost}/metadata/gaia-protocol-gods/${id}`);
         const metadata: GaiaProtocolGodsMetadata = await result.json();
 
         const gender = metadata.gender.toLowerCase();

@@ -125,8 +125,8 @@ meter {
   --on-secondary-container-color: 206, 235, 194;
   --surface-color: 30, 27, 22;
   --on-surface-color: 233, 225, 217;
-  --surface-conatiner-color: 78, 70, 57;
-  --on-surface-conatiner-color: 209, 197, 180;
+  --surface-conatiner-color: 24, 24, 24;
+  --on-surface-conatiner-color: 255, 255, 255;
   --outline-color: 154, 143, 128;
   --error-color: 147, 0, 10;
   --on-error-color: 255, 218, 214;
@@ -225,7 +225,7 @@ meter {
   color: rgba(var(--primary-color));
 }
 .gaia-component.topbar {
-  height: 72px;
+  height: 80px;
   background-color: rgba(var(--surface-conatiner-color));
   color: rgba(var(--on-surface-conatiner-color));
   display: flex;
@@ -271,6 +271,10 @@ meter {
 }
 .gaia-component.topbar > .menu-panel > .menu-container > main > a {
   padding: 16px;
+  color: rgba(var(--on-surface-conatiner-color), 0.7);
+}
+.gaia-component.topbar > .menu-panel > .menu-container > main > a:hover {
+  color: rgba(var(--on-surface-conatiner-color));
 }
 .gaia-component.topbar > .menu-panel > .menu-container > footer {
   display: flex;
@@ -375,21 +379,21 @@ article.gaia-component > pre > code {
   color: rgba(var(--on-surface-conatiner-color));
 }
 .gaia-component.table > table {
-  border: rgba(var(--outline-border));
+  border: 1px solid rgba(var(--outline-color));
   font-size: 14px;
 }
 .gaia-component.table > table > thead > tr > th {
-  border-bottom: rgba(var(--outline-border));
+  border-bottom: 1px solid rgba(var(--outline-color));
   padding: 16px;
   font-weight: bold;
 }
 .gaia-component.table > table > tbody > tr > th {
-  border-bottom: rgba(var(--outline-border));
+  border-bottom: 1px solid rgba(var(--outline-color));
   padding: 16px;
   font-weight: bold;
 }
 .gaia-component.table > table > tbody > tr > td {
-  border-bottom: rgba(var(--outline-border));
+  border-bottom: 1px solid rgba(var(--outline-color));
   padding: 16px;
 }
 .page-footer.gaia-component {
@@ -412,7 +416,7 @@ article.gaia-component > pre > code {
   font-size: 11px;
   border-radius: 4px;
   padding: 4px 8px;
-  position: absolute;
+  position: fixed;
   left: -999999px;
   top: -999999px;
   white-space: nowrap;

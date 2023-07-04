@@ -1,11 +1,11 @@
 import { View, ViewParams } from "gaia-commons-ts";
 import Config from "../Config.js";
+import DomContainerNode from "../engine/DomContainerNode.js";
+import GameNode from "../engine/gamenode/GameNode.js";
+import ImageNode from "../engine/image/ImageNode.js";
+import Fullscreen from "../engine/screen/Fullscreen.js";
 import Button from "../gaia-commons-browser/components/button/Button.js";
 import el from "../gaia-commons-browser/dom/el.js";
-import DomContainerNode from "../gaia-engine/DomContainerNode.js";
-import GameNode from "../gaia-engine/gamenode/GameNode.js";
-import ImageNode from "../gaia-engine/image/ImageNode.js";
-import Fullscreen from "../gaia-engine/screen/Fullscreen.js";
 import ShigorSparrowMetadata from "../metadata/ShigorSparrowMetadata.js";
 import ShigorSparrowsParts from "../metadata/shigor-sparrows-parts.json" assert { type: "json" };
 
@@ -65,7 +65,7 @@ export default class ShigorSparrows extends View {
         this.currentId = id;
         this.isPixelMode = isPixelMode;
 
-        const result = await fetch(`https://${Config.appServerHost}/metadata/shigor-sparrows/${id}`);
+        const result = await fetch(`${Config.appServerHost}/metadata/shigor-sparrows/${id}`);
         const metadata: ShigorSparrowMetadata = await result.json();
 
         const imageParts: any[] = [];
@@ -128,7 +128,7 @@ export default class ShigorSparrows extends View {
     }
 
     private speakMent(): void {
-        const utterance = new SpeechSynthesisUtterance(this.ment);
+        const utterance = new SpeechSynthesisUtterance(`짹! ${this.ment} 짹!`);
         utterance.lang = "ko-KR";
         utterance.pitch = 1.2;
         speechSynthesis.speak(utterance);

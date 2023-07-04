@@ -1,8 +1,8 @@
 import { AtlasAttachmentLoader, SkeletonJson, Skin as SpineSkin } from "@pixi-spine/runtime-4.1";
 import { Spine as PIXISpine, TextureAtlas } from "pixi-spine";
 import * as PIXI from "pixi.js";
-import TextureLoader from "./gaia-engine/TextureLoader.js";
-import GameNode from "./gaia-engine/gamenode/GameNode.js";
+import TextureLoader from "./engine/TextureLoader.js";
+import GameNode from "./engine/gamenode/GameNode.js";
 
 export default class SpineNode extends GameNode {
 

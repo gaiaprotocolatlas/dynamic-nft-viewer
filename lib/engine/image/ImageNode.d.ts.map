@@ -1,0 +1,1 @@
+{"version":3,"file":"ImageNode.d.ts","sourceRoot":"","sources":["../../../src/engine/image/ImageNode.ts"],"names":[],"mappings":"AAEA,OAAO,QAAQ,MAAM,yBAAyB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,QAAQ;gBAE/B,CAAC,EAAE,MAAM,EAAE,CAAC,EAAE,MAAM,EAAE,GAAG,EAAE,MAAM;YAK/B,WAAW;IAQzB,IAAW,GAAG,CAAC,GAAG,EAAE,MAAM,EAEzB;CACJ"}

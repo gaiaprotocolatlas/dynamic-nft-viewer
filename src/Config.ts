@@ -5,10 +5,10 @@ export default DEV_MODE ?
 
     // for development
     {
-        appServerHost: "app-server.gaiaprotocol.com",
+        appServerHost: "http://localhost:4021",
     } :
 
     // for production
     {
-        appServerHost: "app-server.gaiaprotocol.com",
+        appServerHost: "https://app-server.gaia.cc",
     }
