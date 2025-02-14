@@ -13,6 +13,15 @@
 
 <body>
     <script src="/bundle.js"></script>
+    <script>
+        if (window.location.href.startsWith("https://dynamic-nft-viewer.gaia.cc/?collection=gaia-protocol-gods&tokenId=")) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tokenId = urlParams.get("tokenId");
+            if (tokenId) {
+                window.location.href = `https://thegods.gaia.cc/god-viewer/${tokenId}`;
+            }
+        }
+    </script>
 </body>
 
 </html>
